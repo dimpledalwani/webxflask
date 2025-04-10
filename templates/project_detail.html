@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>{{ project.title }}</h1>
+    <img src="{{ url_for('static', filename=project.image) }}" alt="{{ project.title }}">
+    <p>{{ project.description }}</p>
+    <a href="{{ project.link }}" class="btn" target="_blank">View on GitHub</a>
+    <a href="{{ url_for('portfolio') }}" class="btn-secondary">Back to Portfolio</a>
+</div>
+{% endblock %}
