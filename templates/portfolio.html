@@ -1,17 +1,21 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% block content %}
-<h2 class="mb-4 text-center">My Projects</h2>
+<h1 class="mb-5 text-center text-success">My Projects</h1>
 <div class="row row-cols-1 row-cols-md-3 g-4">
     {% for project in projects %}
     <div class="col">
-        <div class="card h-100 shadow-sm">
-            <img src="{{ url_for('static', filename=project.image) }}" class="card-img-top" alt="{{ project.title }}">
-            <div class="card-body">
-                <h5 class="card-title">{{ project.title }}</h5>
-                <p class="card-text">{{ project.description }}</p>
-            </div>
-            <div class="card-footer text-center">
-                <a href="{{ project.link }}" target="_blank" class="btn btn-outline-primary">GitHub</a>
+        <div class="card h-100 shadow-sm border-0">
+            <img src="{{ url_for('static', filename='images/' + project.image) }}" class="card-img-top" alt="{{ project.title }}">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-dark">{{ project.title }}</h5>
+                <p class="card-text text-muted">{{ project.description }}</p>
+                <ul class="list-group list-group-flush mt-3">
+                    <li class="list-group-item"><strong>Frontend:</strong> {{ project.frontend }}</li>
+                    <li class="list-group-item"><strong>Backend:</strong> {{ project.backend }}</li>
+                </ul>
+                <div class="mt-3">
+                    <a href="{{ project.link }}" class="btn btn-primary" target="_blank">View on GitHub</a>
+                </div>
             </div>
         </div>
     </div>

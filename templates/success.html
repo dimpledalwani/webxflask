@@ -1,12 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="text-center">
-    <h2>Thank You, {{ name }}!</h2>
-    <p>Your message has been received. I'll get back to you shortly.</p>
-    <hr>
-    <p><strong>Email:</strong> {{ email }}</p>
-    <p><strong>Subject:</strong> {{ subject }}</p>
-    <p><strong>Message:</strong> {{ message }}</p>
-    <a href="{{ url_for('home') }}" class="btn btn-secondary mt-3">Return to Home</a>
-</div>
+<h1>Thank You, {{ name }}!</h1>
+<p>Your message has been received.</p>
+<p><strong>Email:</strong> {{ email }}</p>
+<p><strong>Subject:</strong> {{ subject }}</p>
+<p><strong>Message:</strong> {{ message }}</p>
+<a href="{{ url_for('home') }}" class="btn btn-outline-primary">Go Back to Home</a>
 {% endblock %}
+

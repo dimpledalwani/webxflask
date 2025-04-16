@@ -6,23 +6,32 @@ app = Flask(__name__)
 dummy_projects = [
     {
         "title": "Donation App",
-        "description": "A MERN-based donation platform for seamless contributions.",
+        "description": "A donation platform that simplifies contributions to various causes.",
+        "frontend": "React.js",
+        "backend": "Node.js + Express + MongoDB",
         "image": "donation.jpg",
-        "link": "https://github.com/supabase-community/donate-app"
+        "link": "https://github.com/vermakamya/Donate_food_Hacktoberfest-2022.git"
     },
     {
         "title": "Hospital Management System",
-        "description": "Manages patient and doctor records efficiently.",
+        "description": "System to manage patients, doctors, appointments, and billing.",
+        "frontend": "HTML + CSS + Bootstrap",
+        "backend": "PHP + MySQL",
         "image": "hospital.jpg",
-        "link": "https://github.com/mohit-coding/hospital-management"
+        "link": "https://github.com/sumitkumar1503/hospitalmanagement.git"
     },
     {
         "title": "Contract Farming Platform",
-        "description": "Connects farmers with buyers via smart contracts.",
+        "description": "Connects farmers directly to buyers using smart contracts.",
+        "frontend": "Angular",
+        "backend": "Solidity (Smart Contracts) + Firebase",
         "image": "farming.jpg",
-        "link": "https://github.com/kisanmitr/contract-farming"
+        "link": "https://github.com/RaunakMishr/KrishiMitr.git"
     }
 ]
+
+
+
 
 @app.route('/')
 def home():
